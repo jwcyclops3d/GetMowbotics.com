@@ -250,7 +250,8 @@ export default function MowboticsWebsite() {
             Request a quote and see whether robotic mowing is a good fit for your property.
           </p>
 
-          <form
+          <form name="contact" netlify>
+  <
   name="quote"
   method="POST"
   data-netlify="true"
