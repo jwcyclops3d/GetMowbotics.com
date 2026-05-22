@@ -251,44 +251,56 @@ export default function MowboticsWebsite() {
           </p>
 
           <form
-            action="https://formsubmit.co/John@getmowbotics.com"
-            method="POST"
-            className="grid gap-5 text-left"
-          >
-            <div className="grid md:grid-cols-2 gap-5">
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                className="w-full rounded-2xl bg-zinc-900 border border-zinc-700 px-5 py-4 outline-none focus:border-lime-400"
-                required
-              />
+  name="quote"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  className="grid gap-5 text-left"
+>
+  {/* Hidden input required by Netlify */}
+  <input type="hidden" name="form-name" value="quote" />
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                className="w-full rounded-2xl bg-zinc-900 border border-zinc-700 px-5 py-4 outline-none focus:border-lime-400"
-                required
-              />
-            </div>
+  {/* Spam protection */}
+  <p className="hidden">
+    <label>
+      Don’t fill this out if you're human:
+      <input name="bot-field" />
+    </label>
+  </p>
 
-            <textarea
-              name="message"
-              placeholder="Tell us about your lawn or property"
-              rows="6"
-              className="w-full rounded-2xl bg-zinc-900 border border-zinc-700 px-5 py-4 outline-none focus:border-lime-400"
-              required
-            />
+  <div className="grid md:grid-cols-2 gap-5">
+    <input
+      type="text"
+      name="name"
+      placeholder="Full Name"
+      className="w-full rounded-2xl bg-zinc-900 border border-zinc-700 px-5 py-4 outline-none focus:border-lime-400"
+      required
+    />
 
-            <button
-              type="submit"
-              className="px-7 py-4 rounded-2xl bg-lime-400 shadow-[0_0_30px_rgba(163,230,53,0.4)]"
-            >
-              Request Quote
-            </button>
-          </form>
-        </div>
+    <input
+      type="email"
+      name="email"
+      placeholder="Email Address"
+      className="w-full rounded-2xl bg-zinc-900 border border-zinc-700 px-5 py-4 outline-none focus:border-lime-400"
+      required
+    />
+  </div>
+
+  <textarea
+    name="message"
+    placeholder="Tell us about your lawn or property"
+    rows="6"
+    className="w-full rounded-2xl bg-zinc-900 border border-zinc-700 px-5 py-4 outline-none focus:border-lime-400"
+    required
+  />
+
+  <button
+    type="submit"
+    className="px-7 py-4 rounded-2xl bg-lime-400 text-black font-bold shadow-[0_0_30px_rgba(163,230,53,0.4)] hover:bg-lime-300 transition duration-300"
+  >
+    Request Quote
+  </button>
+</form>
         <footer className="border-t border-zinc-900 py-8">
   <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
     <div>
