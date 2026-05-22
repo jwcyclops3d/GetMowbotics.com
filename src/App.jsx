@@ -257,7 +257,6 @@ export default function MowboticsWebsite() {
   netlify-honeypot="bot-field"
   className="grid gap-5 text-left"
 >
->
   {/* Hidden input required by Netlify */}
   <input type="hidden" name="form-name" value="quote" />
 
