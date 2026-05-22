@@ -251,7 +251,7 @@ export default function MowboticsWebsite() {
           </p>
 
           <form
-            action="https://formsubmit.co/John@GetMobotics.com"
+            action="https://formsubmit.co/John@GetMowbotics.com"
             method="POST"
             className="grid gap-5 text-left"
           >
